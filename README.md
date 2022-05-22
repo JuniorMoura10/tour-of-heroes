@@ -1,6 +1,6 @@
 # Tour Of Heroes
 
-Projeto desenvolvido no estudo de Angular, no tutorial do site. (https://angular.io/tutorial/toh-pt0)
+Projeto desenvolvido no estudo de Angular, no tutorial do site. (https://angular.io/tutorial/toh-pt0)<br>
 Foi desenvolvido em sete etapas, nas quais eu vi:
 
 ## Etapa 0
