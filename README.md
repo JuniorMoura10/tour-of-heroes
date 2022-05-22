@@ -1,27 +1,66 @@
-# AngularTourOfHeroes
+# Tour Of Heroes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+Projeto desenvolvido no estudo de Angular, no tutorial do site. (https://angular.io/tutorial/toh-pt0)
+Foi desenvolvido em sete etapas, nas quais eu vi:
 
-## Development server
+## Etapa 0
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Criei a estrutura inicial do aplicativo usando a CLI Angular
+- Aprendi que os componentes Angular exibem dados
+- Usoi as chaves duplas de interpolação para exibir o título do aplicativo
 
-## Code scaffolding
+## Etapa 1
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Usoi a CLI para criar um segundo HeroesComponent
+- Exibi o HeroesComponent adicionando-o ao AppComponent shell
+- Apliquei o UppercasePipe para formatar o nome
+- Usei vinculação de dados bi-direcional com a diretiva ngModel
+- Aprendi sobre o AppModule
+- Importei o FormsModule no AppModule para que o Angular reconheça e aplique a diretiva ngModel
+- Aprendi a importância de declarar componentes no AppModulee que a CLI o declarou
 
-## Build
+## Etapa 2
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- O aplicativo Tour of Heroes exibe uma lista de heróis com uma visualização detalhada
+- O usuário pode selecionar um herói e ver os detalhes desse herói
+- Exibir uma lista *ngFor
+- Incluir ou excluir condicionalmente um bloco de HTML *ngIf
+- Alternar uma classe de estilo CSS com uma classe de ligação.
 
-## Running unit tests
+## Etapa 3
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Criei o arquivo HeroDetailComponent.
+- Usei uma associação de propriedade para dar a classe pai HeroesComponentcontrole sobre a classe filho    HeroDetailComponent.
+- Usei o @Input para disponibilizar a propriedade hero para vinculação pelo arquivo HeroesComponent.
 
-## Running end-to-end tests
+## Etapa 4
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Refatorei o acesso a dados para a classe HeroService
+- Registrei o HeroService como provedor de serviços no nível raiz para que ele possa ser injetado em qualquer lugar do aplicativo
+- Usei o Angular Dependency Injection para injetá-lo em um componente
+- Dei ao HeroService get data método uma assinatura assíncrona
+- Descobri a biblioteca Observable do RxJSObservable
+- Usei RxJS of() para retornar um observável de heróis simulados (Observable<Hero[]>)
+- O ngOnInit hook do ciclo de vida do componente para chamar o HeroService método, não o construtor
+- Criei um MessageService para comunicação fracamente acoplada entre classes
+- O HeroService injetado em um componente é criado com outro serviço injetado, MessageService
 
-## Further help
+## Etapa 5
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Adicionei o roteador Angular para navegar entre diferentes componentes
+- Transformei o AppComponent em um shell de navegação com <a> links e um <router-outlet>
+- Configurei o roteador em um App-Routing-Module
+- Defini rotas, uma rota de redirecionamento e uma rota parametrizada
+- Usei a diretiva router Link em elementos âncora
+- Você refatorou uma visualização mestre/detalhe fortemente acoplada em uma visualização de detalhes roteada
+- Usei parâmetros de link do roteador para navegar até a visualização de detalhes de um herói selecionado pelo usuário
+- Compartilhei o HeroServiceentre vários componentes
+
+## Etapa 6
+
+- Adicionei as dependências necessárias para usar HTTP no aplicativo
+- Refatorei HeroService para carregar heróis de uma API da web
+- Estendi HeroService para suporte aos métodos post(), put(), e delete() 
+- Atualizei os componentes para permitir adicionar, editar e excluir heróis
+- Configurei uma API da Web na memória
+- Aprendi a usar observáveis
